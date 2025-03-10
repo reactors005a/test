@@ -1,0 +1,53 @@
+{
+    "status": true,
+    "result": {
+        "token": "eyJjdHkiOiJhcGktZnBhO3Y9MSIsInR5cCI6IkpXVCIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJkZmJLd05xQVNUbTVIMzJhM3hCemFRIiwiZXhwIjoxNzQxNjE5MTM5LCJncmFudHMiOnsiaWRlbnRpdHkiOiJXelhyRU9oVFNxYXF5SEROS1RRVFlBIiwiYXBpS2V5VmVyc2lvbiI6MiwidHlwZSI6M30sImp0aSI6ImRmYkt3TnFBU1RtNUgzMmEzeEJ6YVEtMTc0MTYwMTE1MiJ9.jnDhhA5fhRLThzztBpxyTRgeNlKD_AqLHK7kMax4Tf4",
+        "customer": {
+            "id": "WzXrEOhTSqaqyHDNKTQTYA",
+            "accountId": "l5765J1TR6-awuooAbbL3Q",
+            "parentAccountId": "px3bOT5aT8yjyaSlWyCj0A",
+            "name": "Customer",
+            "uniqueId": null,
+            "email": null,
+            "type": 1,
+            "createTime": 1741601139000,
+            "createBy": null,
+            "modifyTime": 1741601139000,
+            "modifyBy": null
+        },
+        "zpnsJwtToken": "eyJzdiI6IjAwMDAwMSIsInRrX3YiOiJ2MiIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2In0.eyJhdWQiOiJ6cG5zX2xvZ2luIiwic2NwIjpbXSwiYWNjb3VudElkIjoicHgzYk9UNWFUOHlqeWFTbFd5Q2owQSIsImNhbGxiYWNrRG9tYWluIjoiaHR0cHM6Ly91czAxenZhLnpvb20udXMiLCJpc3MiOiJ6dmFfYXBpIiwienBuc0NvbnRleHQiOnsidXNlclR5cGUiOjJ9LCJ0eXAiOiJ6bV9zdnIiLCJleHAiOjE3NDE2MDQ3MzksImlhdCI6MTc0MTYwMTEzOSwidXNlcklkIjoiV3pYckVPaFRTcWFxeUhETktUUVRZQSIsImp0aSI6Ild6WHJFT2hUU3FhcXlIRE5LVFFUWUEiLCJlbWFpbCI6Ild6WHJFT2hUU3FhcXlIRE5LVFFUWUEifQ.LBVt8tyhHYkj_VWbFiDxdJRXj8aTRsyd1Qo3O_Zvb39Zb_IJQyMcDAtHpG54ryJSjYF0zTkfSnc2H2vXU0Mz1A",
+        "zpnsWs": "wss://zpns.zoom.us/ws",
+        "enableChat": true,
+        "zmAid": "px3bOT5aT8yjyaSlWyCj0A",
+        "zmHAid": "776",
+        "enableBrowserDataInfo": true,
+        "enableCampaignPersistExclude": false,
+        "chatGateway": {
+            "webServiceType": null,
+            "apiServiceType": null,
+            "zccWebPath": "https://us01cci.zoom.us",
+            "zccApiPath": "https://us01cciapi.zoom.us",
+            "zvaApiPath": "https://us01apizva.zoom.us"
+        },
+        "gateway": {
+            "webServiceType": null,
+            "apiServiceType": null,
+            "zccWebPath": "https://us01cci.zoom.us",
+            "zccApiPath": "https://us01cciapi.zoom.us",
+            "zvaApiPath": "https://us01apizva.zoom.us"
+        },
+        "userIdentityJwtApiUrl": null,
+        "consumerWebsiteData": [],
+        "systemConfig": {
+            "enable_chat_header_color_customization": true,
+            "zva_chat_incoming_api_enable_sync_return_message": true,
+            "enableRefactorMessagingOrder": true
+        },
+        "enableConsumerNewMessageNotifications": true,
+        "enableLogReport": true,
+        "enablePushUserInput": false,
+        "enableTyping": true,
+        "enableCdnSignature": true,
+        "zvaCdnResource": null
+    }
+}
