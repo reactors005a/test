@@ -1,36 +1,40 @@
-# This is a basic workflow to help you get started with Actions
+name: Обновление списка блог-постов
 
-name: CI
-
-# Controls when the workflow will run
+# Триггеры: пуш, расписание и кнопка Run workflow
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main           # или ваша основная ветка
+    paths:
+      - README.md      # опционально — только при изменении README
+  schedule:
+    - cron: '0 * * * *' # каждый час в 0-ю минуту UTC (будет дополнительно)
+  workflow_dispatch:    # ручной запуск на вкладке Actions
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+# Нужно, чтобы Action мог пушить правки в README
+permissions:
+  contents: write
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  update-blog-post-list:
+    name: Вставить последние посты
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      # 1) Клонируем репозиторий
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      # 2) Вставляем блог-посты между маркерами
+      - name: Обновить README
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://dev.to/sarahokolo/feed/"
+          max_post_count: 5
+          readme_path: ./README.md
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      # 3) (Необязательно) Логи, чтобы убедиться, что всё прошло
+      - name: Show README diff
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          git diff README.md || echo "No changes"
