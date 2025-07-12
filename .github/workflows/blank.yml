@@ -29,7 +29,7 @@ jobs:
       - name: Обновить README
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          feed_list: "https://dev.to/sarahokolo/"
+          feed_list: "https://dev.to/sarahokolo/xxx<img>zzzz"
           max_post_count: 5
           readme_path: ./README.md
           gh_token: ${{ secrets.GITHUB_TOKEN }}
